@@ -1,27 +1,273 @@
-.jumbotron {
-  background: #532F8C;
-  color: white;
-  padding-bottom: 80px; }
-  .jumbotron .btn-primary {
-    background: #845ac7;
-    border-color: #845ac7; }
-    .jumbotron .btn-primary:hover {
-      background: #7646c1; }
-  .jumbotron p {
-    color: #d9ccee;
-    max-width: 75%;
-    margin: 1em auto 2em; }
-  .navbar + .jumbotron {
-    margin-top: -20px; }
-  .jumbotron .lang-logo {
-    display: block;
-    background: #B01302;
-    border-radius: 50%;
-    overflow: hidden;
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    border: 2px solid white; }
-    .jumbotron .lang-logo img {
-      max-width: 100%; }
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
 
+.pais-sektsioon {
+    background-image: url('/assets/hills.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 37px 72px 140px;
+    margin-bottom: 300px;
+}
+
+.pais-vasak {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-pealkiri {
+    font-size: 33px;
+    font-weight: 800;
+    color: #0B0B0B;
+    width: 126px;
+    word-wrap: normal;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.pais {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pais>nav {
+    display: flex;
+    align-items: center;
+}
+
+.pais>nav>a {
+    margin-left: 50px;
+    color: #000;
+    letter-spacing: 2.67px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 16.67px;
+}
+
+.pais>nav>a:hover {
+    color: #444;
+}
+
+.sisu {
+    margin-top: 230px;
+    position: relative;
+}
+
+.sisu>h1,
+.sisu>h2,
+.sisu>h4 {
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #0B0B0B;
+}
+
+.sisu>h2 {
+    font-size: 39.57px;
+}
+
+.sisu>h1 {
+    font-size: 74.39px
+}
+
+.sisu>h4 {
+    font-size: 20.83px;
+    width: 477px;
+    line-height: 29.17px;
+}
+
+.sisu>button {
+    margin-top: 30px;
+    font-size: 12.5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2.25px;
+    color: #FFFFFF;
+    background: #0B0B0B 0% 0% no-repeat padding-box;
+    padding: 24px 22.5px 21px;
+    border: 0;
+}
+
+.tydruk {
+    width: 800px;
+    height: 800px;
+    background-image: url('/assets/tydruk.png');
+    background-size: cover;
+    background-position-x: center;
+    border-radius: 50%;
+    position: absolute;
+    top: -200px;
+    right: -280px;
+    z-index: 1;
+    box-shadow: 0px 200px 160px -75px rgb(0 0 0 / 40%);
+}
+
+.vari {
+    width: 750px;
+    height: 90px;
+    background: transparent url('/assets/vari.png') 0% 0% no-repeat padding-box;
+    background-size: cover;
+    background-position-x: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -350px;
+    right: -280px;
+}
+
+.kaartide-sektsioon {
+    margin-top: 150px;
+    padding-left: 72px;
+    margin-bottom: 200px;
+}
+
+.pealkirjad {
+    display: flex;
+    flex-direction: column;
+}
+
+.pealkirjad>h4 {
+    text-transform: uppercase;
+    color: gray;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: -1.08px;
+}
+
+.pealkirjad>h1 {
+    letter-spacing: -1.08px;
+    color: black;
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 0.9;
+}
+
+.tekst-ja-kaardid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-top: 24px;
+    line-height: 1.7;
+}
+
+.tekst {
+    letter-spacing: 0px;
+    color: #3D3D3D;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nooled {
+    display: flex;
+    align-items: end;
+    margin-bottom: -14px;
+}
+
+.nool {
+    font-size: 46px;
+    cursor: pointer;
+    margin-bottom: -13px
+}
+
+.esimene-number {
+    margin-left: 10px;
+    font-size: 33px;
+}
+
+.teine-number {
+    font-size: 21px;
+    margin-left: 5px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    color: #9A9A9A;
+}
+
+.kaardid {
+    display: flex;
+    width: auto;
+    margin-right: -100px;
+}
+
+.esimene-pilt,
+.teine-pilt,
+.kolmas-pilt {
+    height: 406px;
+    width: 309px;
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 34px;
+    box-shadow: #bbb 0px 0px 30px;
+}
+
+.esimene-pilt {
+    background-image: url("/assets/binokkel-tydruk.png");
+}
+
+.teine-pilt {
+    background-image: url("/assets/binokkel-poiss.png");
+}
+
+.kolmas-pilt {
+    background-image: url("/assets/kaart-poisid.png");
+    margin-right: -50px;
+}
+.form {
+    width: 400px;
+    height: 440px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    position: relative
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    transition: all .3s;
+    border-bottom: 2px solid black;
+    color: solid black;
+}
+
+::placeholder {
+    color: slategray;
+    opacity: 1;
+}
+
+input:focus {
+    border-bottom: 2px solid black;
+}
+
+button {
+    float: right;
+    padding: 8px 12px;
+    margin: 8px 0 0;
+    border: 2px solid black;
+    background: 0;
+    color: slategray;
+    cursor: pointer;
+    transition: all .3s
+}
+
+button:hover {
+    background: black;
+    color: #fff
+}
+textarea {
+    width: 340px;
+    background-color: inherit;
+    border-bottom: 2px solid black;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
