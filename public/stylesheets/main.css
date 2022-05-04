@@ -106,17 +106,7 @@ body {
     box-shadow: 0px 200px 160px -75px rgb(0 0 0 / 40%);
 }
 
-.vari {
-    width: 750px;
-    height: 90px;
-    background: transparent url('/assets/vari.png') 0% 0% no-repeat padding-box;
-    background-size: cover;
-    background-position-x: center;
-    border-radius: 50%;
-    position: absolute;
-    bottom: -350px;
-    right: -280px;
-}
+
 
 .kaartide-sektsioon {
     margin-top: 150px;
@@ -207,15 +197,15 @@ body {
 }
 
 .esimene-pilt {
-    background-image: url("/assets/binokkel-tydruk.png");
+    background-image: url('/assets/binokkel-tydruk.png');
 }
 
 .teine-pilt {
-    background-image: url("/assets/binokkel-poiss.png");
+    background-image: url('/assets/binokkel-poiss.png');
 }
 
 .kolmas-pilt {
-    background-image: url("/assets/kaart-poisid.png");
+    background-image: url('/assets/kaart-poisid.png');
     margin-right: -50px;
 }
 .form {
@@ -270,4 +260,78 @@ textarea {
     border-left: none;
     border-right: none;
     border-top: none;
+}
+
+.alumine-vasak {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding-left: 59px;
+   
+}
+
+.logo-pealkiri-alumine {
+    font-size: 27px;
+    font-weight: 800;
+    color: #0B0B0B;
+    width: 103px;
+    word-wrap: normal;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.alumine{
+    width: 1327px;
+    height: 276px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    padding-top: 60px;
+    
+    background: #F3F3F3 0% 0%;
+    opacity: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items:flex-start;
+   
+    
+    
+}
+
+
+.alumine >nav {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    padding-right: 47.83px;
+    
+}
+
+.alumine>nav>a {
+    margin-left: 50px;
+    color: #000;
+    letter-spacing: 2.67px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 16.67px;
+}
+
+.alumine>nav>a:hover {
+    color: #444;
+}
+
+.info-ja-logod {
+    display: flex;
+    flex: 50%;
+    align-items: center;
+    margin-left: 59px;
+    margin-right:47.83px;
+    justify-content: space-between;
+
+    
+}
+.icons {
+    
 }

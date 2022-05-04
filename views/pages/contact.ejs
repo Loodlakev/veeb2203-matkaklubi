@@ -9,20 +9,20 @@
     <div class="container-fluid pais-sektsioon">
         <%- include ("../partials/nav.ejs") %>
             <div class="container-fluid kontakti-sektsioon">
-                <h3>CONTACT US</h3>
-                <form class="form">
-                    <label for="Name:"><input placeholder="Name"></input>
-                    <label for="Email:"><input placeholder="E-mail"></input>
-                    <label for="Message:">
-                    <textarea placeholder="Message" rows="6" ></textarea>
-                    <button>Send message</button>
-                </form>
-            </section>
-            <div class="tydruk"></div>
+                <section>
+                    <form class="form">
+                        <label for="name:"><input placeholder="Name"></input>
+                        <label for="email:"><input placeholder="E-mail"></input>
+                        <label for="message:">
+                            <textarea placeholder="Message" rows="6" ></textarea>
+                        <button>Send message</button>
+                    </form>
+                </section>
             </div>
     </div>
-    <div>siin on kontakt</div>
+    
     <script src="/scripts/contact.js"></script>
 </body>
+<%- include ("../partials/bottomnav.ejs") %>
 
 </html>
