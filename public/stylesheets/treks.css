@@ -1,6 +1,6 @@
 .matkad {
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     text-align: center;
     margin-top: 2%; 
     margin-left: auto;
@@ -9,8 +9,8 @@
 
 .matk {
     padding-top: 5%;
-    padding-bottom: 5%;
-    margin-bottom: auto;
+    
+    
 
 }
 
@@ -22,7 +22,9 @@
 
 .matka-pilt>img {
     margin-top: 1%;
+    margin-bottom: 5%;
     width: 70%;
     box-shadow: #bbb 0px 0px 30px;
     
 }
+

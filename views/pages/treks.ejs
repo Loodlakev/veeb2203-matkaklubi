@@ -25,28 +25,21 @@
                                 %>
                                 target="_blank"><%= matkad[i].locationDescription %></a>
                         </div>
-                        <div class="matka-algus">
-                            <%= matkad[i].startsAt %> -
-                            <%= matkad[i].endsAt %>
+                        <div class="matka-algus-ja-lopp">
+                            <%= matkad[i].startsAt %> - <%= matkad[i].endsAt %>
                         </div>
                         <div class="matka-hind">
                             <%= matkad[i].price %>
                         </div>
                         <div class="matka-pilt">
                             <img src=<%=matkad[i].imageUrl %>
-                            <%= matkad[i].imageUrl%>
-                        </div>
-                        
-                        
+                        </div>  
                     </div>
-                    <% } %>
-                    
+                <% } %>     
             </div>
             
     </div>
-    <footer class="container-fluid " >
-        <%- include ("../partials/bottomnav.ejs") %>
-        </footer>
+    <%- include ("../partials/bottomnav.ejs") %>
 </body>
 
 
