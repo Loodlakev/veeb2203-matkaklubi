@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Matkaklubi - Matkad</title>
+    <link rel="stylesheet" href="/stylesheets/treks.css">
+    <%- include ("../partials/header.ejs") %>
+</head>
+
+<body>
+
+    <div class="container-fluid pais-sektsioon">
+        <%- include ("../partials/nav.ejs") %>
+            <div class="matkad">
+                <% for(let i=0; i < matkad.length; i++) { %>
+                    <div class="matk">
+                        <div class="matka-pealkiri">
+                            <%= matkad[i].title %>
+                        </div>
+                        <div class="matka-kirjeldus" >
+                            <%= matkad[i].description %>
+                        </div>
+                        <div class="matka-asukoht">
+                            <a href=<%=`https://www.google.com/maps/@${matkad[i].locationLatitude},${matkad[i].locationLongitude},19z`
+                                %>
+                                target="_blank"><%= matkad[i].locationDescription %></a>
+                        </div>
+                        <div class="matka-algus">
+                            <%= matkad[i].startsAt %> -
+                            <%= matkad[i].endsAt %>
+                        </div>
+                        <div class="matka-hind">
+                            <%= matkad[i].price %>
+                        </div>
+                        <div class="matka-pilt">
+                            <img src=<%=matkad[i].imageUrl %>
+                            <%= matkad[i].imageUrl%>
+                        </div>
+                        
+                        
+                    </div>
+                    
+            </div>
+            <% } %>
+    </div>
+   
+</body>
+
+<footer>
+    <%- include ("../partials/bottomnav.ejs") %>
+    </footer>
+</html>

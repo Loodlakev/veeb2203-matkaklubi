@@ -1,0 +1,28 @@
+.matkad {
+    display:flex;
+    flex-direction: row;
+    text-align: center;
+    margin-top: 2%; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.matk {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-bottom: auto;
+
+}
+
+.matka-pealkiri {
+    text-transform: uppercase;
+    font-weight: bold;
+   
+}
+
+.matka-pilt>img {
+    margin-top: 1%;
+    width: 70%;
+    box-shadow: #bbb 0px 0px 30px;
+    
+}
