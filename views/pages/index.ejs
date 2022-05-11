@@ -1,53 +1,48 @@
-<!DOCTYPE html>
 <html>
+
 <head>
   <%- include ("../partials/header.ejs") %>
 </head>
 
 <body>
 
-    <div class="container-fluid pais-sektsioon">
-  <%- include ("../partials/nav.ejs") %>
-     <div class="sisu">
-            <h2>Climb for better</h2>
-            <h1>Get out now</h1>
-            <h4>Join us for the weekend to climb the highest peak in England</h4>
-            <button>View upcoming treks</button>
-            <div class="tydruk"></div>
-        </div>
-    </div>
-    <div class="container-fluid kaartide-sektsioon">
-        <div class="pealkirjad row">
-            <h4>Choose</h4>
-            <h1 class="col-4">These Best</h1>
-            <h1 class="col-4">Treks For Spring</h1>
-        </div>
-        <div class="tekst-ja-kaardid row">
-            <div class="tekst col-4">
-                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                    ut labore et dolore magna aliqua. Quis ipsum su spendisse ultrices gravida. Risus commodo
-                    viverra maec enas accumsan lacus vel facilisis.</span>
-                <div class="nooled">
-                    <span class="nool">&#8592;</span>
-                    <span class="esimene-number">01</span>
-                    <span class="teine-number">/06</span>
-                    <span class="nool"> &#8594;</span>
-                </div>
-            </div>
-            <div class="kaardid">
-                <div class="esimene-pilt"></div>
-                <div class="teine-pilt"></div>
-                <div class="kolmas-pilt"></div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-</div>
-<footer>
-    <%- include ("../partials/bottomnav.ejs") %>
-    </footer>
 
+  <div class="container-fluid pais-sektsioon">
+    <%- include ("../partials/nav.ejs") %>
+      <div class="sisu">
+        <h2>Climb for better</h2>
+        <h1>Get out now</h1>
+        <h4>Join us for the weekend to climb the highest peak in England</h4>
+        <button href="/treks">View upcoming treks</button>
+        <div class="tydruk"></div>
+      </div>
+  </div>
+  <div class="container-fluid kaartide-sektsioon">
+    <div class="pealkirjad row">
+      <h4>Choose</h4>
+      <h1 class="col-4">These Best</h1>
+      <h1 class="col-4">Treks For Spring</h1>
+    </div>
+    <div class="tekst-ja-kaardid row">
+      <div class="tekst col-4">
+        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Quis ipsum su spendisse ultrices gravida. Risus commodo
+          viverra maec enas accumsan lacus vel facilisis.</span>
+        <div class="nooled">
+          <span class="nool">&#8592;</span>
+          <span class="esimene-number">01</span>
+          <span class="teine-number">/06</span>
+          <span class="nool"> &#8594;</span>
+        </div>
+      </div>
+      <div class="kaardid">
+        <div class="esimene-pilt"></div>
+        <div class="teine-pilt"></div>
+        <div class="kolmas-pilt"></div>
+      </div>
+    </div>
+  </div>
+  <%- include ("../partials/bottomnav.ejs") %>
 </body>
 
 </html>

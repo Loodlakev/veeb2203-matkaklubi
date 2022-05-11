@@ -1,0 +1,79 @@
+.matkale-registreerumine {
+    display: flex;
+    margin-top: 60px;
+}
+
+.matk {
+    width: 50%;
+    padding: 20px;
+    border-right: 1px solid gray;
+}
+
+.matka-pealkiri,
+.vormi-pealkiri {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16.67px;
+    margin-bottom: 16px;
+}
+
+.matka-asukoht {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.matka-hind {
+    margin-top: 16px;
+    font-weight: bold;
+}
+
+.matka-pilt {
+    margin-top: 20px;
+}
+
+.matka-pilt>img {
+    width: 100%;
+}
+
+.vorm {
+    width: 400px;
+    height: 440px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    position: relative
+}
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    transition: all .3s;
+    border-bottom: 1px solid black;
+    color: solid black;
+}
+input:focus {
+    border-bottom: 1px solid black;
+}
+textarea {
+    width: 400px;
+    background-color: inherit;
+    border-bottom: 1px solid black;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+button {
+    float: right;
+    padding: 8px 12px;
+    margin: 8px 0 0;
+    border: 1px solid black;
+    border-radius: 0.25rem !important;
+    background: black;
+    color: white;
+    cursor: pointer;
+    transition: all .3s
+}

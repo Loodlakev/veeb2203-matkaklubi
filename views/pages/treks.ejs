@@ -21,8 +21,7 @@
                             <%= matkad[i].description %>
                         </div>
                         <div class="matka-asukoht">
-                            <a href=<%=`https://www.google.com/maps/@${matkad[i].locationLatitude},${matkad[i].locationLongitude},19z`
-                                %>
+                            <a href=<%=`https://www.google.com/maps/@${matkad[i].locationLatitude},${matkad[i].locationLongitude},19z` %>
                                 target="_blank"><%= matkad[i].locationDescription %></a>
                         </div>
                         <div class="matka-algus-ja-lopp">
@@ -32,8 +31,9 @@
                             <%= matkad[i].price %>
                         </div>
                         <div class="matka-pilt">
-                            <img src=<%=matkad[i].imageUrl %>
-                        </div>  
+                            <img src=<%=matkad[i].imageUrl %>>
+                        </div>
+                        <a href=<%=`treks/${matkad[i].id}`%> class="btn btn-dark matka-nupp">Registreeru matkale</a> 
                     </div>
                 <% } %>     
             </div>

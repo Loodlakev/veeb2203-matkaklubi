@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Matkaklubi - Matk</title>
+    <link rel="stylesheet" href="/stylesheets/trek.css">
+    <%- include ("../partials/header.ejs") %>
+</head>
+
+<body>
+
+    <div class="container-fluid pais-sektsioon">
+        <%- include ("../partials/nav.ejs") %>
+            <div class="matkale-registreerumine">
+                <div class="matk">
+                    <div class="matka-pealkiri">
+                        <%= matk.title %>
+                    </div>
+                    <div class="matka-kirjeldus">
+                        <%= matk.description %>
+                    </div>
+                    <div class="matka-asukoht">
+                        <span>Koguneme: </span>
+                        <a href=<%=`https://www.google.com/maps/@${matk.locationLatitude},${matk.locationLongitude},19z`
+                            %>
+                            target="_blank"><%= matk.locationDescription %></a>
+                    </div>
+                    <div class="matka-algus-ja-lopp">
+                        <%= matk.startsAt %> - <%= matk.endsAt %>
+                    </div>
+                    <div class="matka-hind">
+                        <span>Hind: </span>
+                        <%= matk.price %>
+                    </div>
+                    <div class="matka-pilt">
+                        <img src=<%=matk.imageUrl %>>
+                    </div>
+                </div>
+                <div class="vorm">
+                    <div class="vormi-pealkiri">
+                        Registreeru
+                    </div>
+                    <section>
+                        <form class="form">
+                            <label for="name:"><input placeholder="Nimi"></input>
+                            <label for="email:"><input placeholder="Email"></input>
+                            <label for="message:">
+                                <textarea placeholder="Küsimus või sõnum" rows="6" ></textarea><br>
+                            <button>Registreeru</button>
+                        </form>
+                    </section>
+                </div>
+            </div>
+    </div>
+    <%- include ("../partials/bottomnav.ejs") %>
+    <script src="/scripts/trek.js"></script>
+</body>
+
+</html>
