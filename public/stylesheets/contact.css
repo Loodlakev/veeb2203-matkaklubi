@@ -20,11 +20,6 @@ input {
     color: solid black;
 }
 
-::placeholder {
-    color: slategray;
-    opacity: 1;
-}
-
 input:focus {
     border-bottom: 2px solid black;
 }
@@ -34,8 +29,9 @@ button {
     padding: 8px 12px;
     margin: 8px 0 0;
     border: 2px solid black;
-    background: 0;
-    color: slategray;
+    background: black;
+    border-radius: 0.25rem !important;
+    color: white;
     cursor: pointer;
     transition: all .3s
 }
