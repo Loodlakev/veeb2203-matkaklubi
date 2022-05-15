@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <title>Matkaklubi - News</title>
+    <link rel="stylesheet" href="/stylesheets/news.css">
     <%- include ("../partials/header.ejs") %>
 </head>
 
@@ -9,7 +11,22 @@
 
     <div class="container-fluid pais-sektsioon">
         <%- include ("../partials/nav.ejs") %>
-
+        <div class="uudised">
+            <% for(let i=0; i < uudised.length; i++) { %>
+                <div class="uudis">
+                    <div class="uudise-pealkiri">
+                        <%= uudised[i].title %>
+                    </div>
+                    <div class="uudise-kirjeldus" >
+                        <%= uudised[i].description %>
+                    </div>
+                    <div class="uudise-pilt">
+                        <img src=<%=uudised[i].imageUrl %>>
+                    </div>
+                    <a href=<%=`${uudised[i].newsUrl}`%> class="btn btn-dark uudise-nupp">Read full story</a>
+                </div>
+                <% } %>     
+        </div>                    
     </div>
         <%- include ("../partials/bottomnav.ejs") %>
 </body>

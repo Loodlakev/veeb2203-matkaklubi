@@ -48,10 +48,45 @@ const matkad = [matk1, matk2, matk3];
 
 const naitaMatkaVaadet = (req, res) => {
   const matk = matkad.find((matk) => matk.id === parseInt(req.params.matkaId))
-  return res.render('pages/trek', { matk: matk })
+  return res.render('pages/trek', { matk })
 }
 
+const registreeriOsaleja = (req, res) => {
+  const paringuKeha = req.body;
+  const matk = matkad.find((matk) => matk.id === parseInt(paringuKeha.matkaId));
+  matk.participants.push(paringuKeha.osaleja);
+  console.log(JSON.stringify(matkad));
+  res.json({answer: 'Töötas!'});
+}
+
+const uudis1 = {
+  id: 0,
+  title: 'What I learned from breaking my ankle in the mountains',
+  description: 'It wasn’t my finest hour. A few years ago, I was hiking in the Peak District with my husband when I stepped in a small hole and turned my ankle. ',
+  imageUrl: 'https://cdn.mos.cms.futurecdn.net/DSHxEbu7i7CxLKJLeQfVJh-840-80.jpg.webp',
+  newsUrl: 'https://www.advnture.com/news/what-i-learned-from-breaking-my-ankle-in-the-mountains'
+};
+
+const uudis2 = {
+  id: 0,
+  title: 'The top risks of hiking? Being male and on your phone',
+  description: 'Newly released data shows that men make up the vast majority of mountain fatalities, while experts agree that lack of navigation skills and misreading conditions are key risk factors',
+  imageUrl: 'https://cdn.mos.cms.futurecdn.net/7gaSLord49YjpNHV6R7cce-1024-80.jpg.webp',
+  newsUrl: 'https://www.advnture.com/news/top-risks-hiking'
+};
+
+const uudis3 = {
+  id: 0,
+  title: "Army veteran's quest to run 5000 miles for new mental health charity",
+  description: 'Paul Minter raises awareness and money for inspiring retreat on solo, unsupported 218-day UK coast route',
+  imageUrl: 'https://cdn.mos.cms.futurecdn.net/iDuf93McC3DLsajso6pnAe-1024-80.jpg.webp',
+  newsUrl: 'https://www.advnture.com/news/army-veterans-quest-to-run-5000-miles-for-new-mental-health-charity'
+};
+
+const uudised = [uudis1, uudis2, uudis3];
+
 express()
+  .use(express.json())
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
@@ -59,5 +94,6 @@ express()
   .get('/contact', (req, res) => res.render('pages/contact'))
   .get('/treks/:matkaId', naitaMatkaVaadet)
   .get('/treks', (req, res) => res.render('pages/treks', { matkad: matkad }))
-  .get('/news', (req, res) => res.render('pages/news'))
+  .get('/news', (req, res) => res.render('pages/news' , { uudised: uudised }))
+  .post('/api/register', registreeriOsaleja)
   .listen(PORT, () => console.log(`Listening on http://localhost:${PORT}`));
