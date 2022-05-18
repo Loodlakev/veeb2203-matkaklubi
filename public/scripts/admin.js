@@ -3,6 +3,7 @@ const matkaDetailElement = document.getElementById('matka-detail');
 const matkaPealkiriElement = document.getElementById('matka-pealkiri');
 const detailPealkiriElement = document.getElementById('detail-pealkiri');
 const detailKirjeldusElement = document.getElementById('detail-kirjeldus');
+const detailAsukohtElement = document.getElementById('detail-asukoht');
 const detailAlgusElement = document.getElementById('detail-algus');
 const detailLoppElement = document.getElementById('detail-lopp');
 const detailHindElement = document.getElementById('detail-hind');
@@ -35,6 +36,7 @@ const kuvaMatkaDetail = (id) => {
     matkaPealkiriElement.innerHTML = matk.title;
     detailPealkiriElement.value = matk.title;
     detailKirjeldusElement.value = matk.description;
+    detailAsukohtElement.value = matk.locationDescription;
     detailAlgusElement.value = matk.startsAt;
     detailLoppElement.value = matk.endsAt;
     detailHindElement.value = matk.price;
@@ -46,6 +48,7 @@ const kuvaMatkaDetail = (id) => {
 const salvestaMatk = async () => {
     matk.title = detailPealkiriElement.value;
     matk.description = detailKirjeldusElement.value;
+    matk.locationDescription = detailAsukohtElement.value;
     matk.startsAt = detailAlgusElement.value;
     matk.endsAt = detailLoppElement.value;
     matk.price = detailHindElement.value;

@@ -68,6 +68,7 @@ const salvestaMatk = (req, res) => {
   let matk = matkad.find((matk) => matk.id === parseInt(matkaId));
   matk.title = req.body.title;
   matk.description = req.body.description;
+  matk.locationDescription = req.body.locationDescription;
   matk.startsAt = req.body.startsAt;
   matk.endsAt = req.body.endsAt;
   matk.price = req.body.price;
