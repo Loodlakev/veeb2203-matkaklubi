@@ -1,0 +1,31 @@
+.konteiner {
+    display: flex;
+    margin: 40px;
+}
+
+.matkad>div {
+    margin-bottom: 10px;
+}
+
+.matka-detail {
+    display: none;
+    flex-direction: column;
+    margin-left: 20px;
+    border-left: solid 1px gray;
+    padding-left: 20px;
+    width: 400px;
+}
+
+input,
+textarea {
+    margin-top: 10px !important;
+}
+
+button {
+    margin-top: 15px !important;
+    width: 100px;
+}
+
+.osalejad {
+    margin-top: 25px;
+}

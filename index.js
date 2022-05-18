@@ -6,8 +6,8 @@ const matk1 = {
   id: 0,
   title: 'Kepikõnd ümber Ülemiste järve',
   description: 'Jalad jäävad kuivaks.',
-  startsAt: '6. juuni, 10:00',
-  endsAt: '6. juuni, 14:00',
+  startsAt: '6. juuni 2022, 10:00',
+  endsAt: '6. juuni 2022, 14:00',
   locationDescription: 'Järve Selveri parkla',
   locationLatitude: '59.393345',
   locationLongitude: '24.722974',
@@ -20,8 +20,8 @@ const matk2 = {
   id: 1,
   title: 'Rattamatk ümber Naissaare',
   description: 'Saame kokku Pirita rannas, ujume ratastega üle ja sõidame paar tundi. Toitulustus on hinna sees.',
-  startsAt: '1. juuli, 11:00',
-  endsAt: '1. juuli, 18:00',
+  startsAt: '1. juuli 2022, 11:00',
+  endsAt: '1. juuli 2022, 18:00',
   locationDescription: 'Pirita rannas',
   locationLatitude: '59.470105',
   locationLongitude: '24.828892',
@@ -34,8 +34,8 @@ const matk3 = {
   id: 2,
   title: 'Ujumine üle Suure Väina',
   description: 'Kaasa ujukad.',
-  startsAt: '29. mai, 9:00',
-  endsAt: '30. mai, 14:00',
+  startsAt: '29. mai 2022, 9:00',
+  endsAt: '30. mai 2022, 14:00',
   locationDescription: 'Virtsu sadamas',
   locationLatitude: '58.573628',
   locationLongitude: '23.510629',
@@ -57,6 +57,22 @@ const registreeriOsaleja = (req, res) => {
   matk.participants.push(paringuKeha.osaleja);
   console.log(JSON.stringify(matkad));
   res.json({answer: 'Töötas!'});
+}
+
+const tagastaMatkad = (req, res) => {
+  res.json(matkad);
+}
+
+const salvestaMatk = (req, res) => {
+  const matkaId = req.params.matkaId;
+  let matk = matkad.find((matk) => matk.id === parseInt(matkaId));
+  matk.title = req.body.title;
+  matk.description = req.body.description;
+  matk.startsAt = req.body.startsAt;
+  matk.endsAt = req.body.endsAt;
+  matk.price = req.body.price;
+  matk.imageUrl = req.body.imageUrl;
+  res.json({ response: 'Töötas!' });
 }
 
 const uudis1 = {
@@ -95,5 +111,8 @@ express()
   .get('/treks/:matkaId', naitaMatkaVaadet)
   .get('/treks', (req, res) => res.render('pages/treks', { matkad: matkad }))
   .get('/news', (req, res) => res.render('pages/news' , { uudised: uudised }))
+  .get('/admin', (req, res) => res.render('pages/admin'))
   .post('/api/register', registreeriOsaleja)
+  .get('/api/treks', tagastaMatkad)
+  .post('/api/treks/:matkaId', salvestaMatk)
   .listen(PORT, () => console.log(`Listening on http://localhost:${PORT}`));
