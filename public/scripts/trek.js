@@ -26,7 +26,7 @@ nuppElement.onclick = async () => {
             body: JSON.stringify(paringuKeha),
         });
         const responseJson = await response.json();
-        if (responseJson.response === "Töötas!") {
+        if (responseJson.answer === "Töötas!") {
             nimiElement.value = '';
             emailElement.value = '';
             markusElement.value = '';

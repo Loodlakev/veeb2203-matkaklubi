@@ -20,14 +20,14 @@ const laeMatkad = async () => {
     for (let i = 0; i < matkad.length; i++) {
         matkadElement.innerHTML += `
             <div>
-                <a href="#" onclick="kuvaMatkaDetail(${matkad[i].id})">${matkad[i].title}</a>
+                <a href="#" onclick="kuvaMatkaDetail('${matkad[i]._id}')">${matkad[i].title}</a>
             </div>
         `;
     }
 }
 
 const kuvaMatkaDetail = (id) => {
-    matk = matkad.find((matk) => matk.id === id);
+    matk = matkad.find((matk) => matk._id === id);
     let osalejateNimed = "";
     for (let i = 0; i < matk.participants.length; i++) {
         osalejateNimed += `<div>${matk.participants[i].nimi}</div>`;
@@ -55,7 +55,7 @@ const salvestaMatk = async () => {
     matk.imageUrl = detailPiltElement.value;
 
     try {
-        const response = await fetch(`/api/treks/${matk.id}`, {
+        const response = await fetch(`/api/treks/${matk._id}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -68,7 +68,7 @@ const salvestaMatk = async () => {
         console.log(e);
     }
     await laeMatkad();
-    kuvaMatkaDetail(matk.id);
+    kuvaMatkaDetail(matk._id);
 }
 
 (async () => {
